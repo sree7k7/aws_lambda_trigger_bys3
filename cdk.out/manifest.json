@@ -1,0 +1,149 @@
+{
+  "version": "35.0.0",
+  "artifacts": {
+    "AwsPracticePythonStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AwsPracticePythonStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AwsPracticePythonStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AwsPracticePythonStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f0365c0ac213fe4d509a4043cd2b8a3dc69ff3de3bc274ed7ad172e15809eb59.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AwsPracticePythonStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AwsPracticePythonStack.assets"
+      ],
+      "metadata": {
+        "/AwsPracticePythonStack/S3NotificationHandlerRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3NotificationHandlerRoleC091C099"
+          }
+        ],
+        "/AwsPracticePythonStack/S3NotificationHandlerRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3NotificationHandlerRoleDefaultPolicy42BF7EBD"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonbucketF30CDC3C"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-bucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonbucketNotificationsD7A6CFE8"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-bucket/AllowBucketNotificationsToAwsPracticePythonStackawspracticepythonlambda635BB837": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonbucketAllowBucketNotificationsToAwsPracticePythonStackawspracticepythonlambda635BB837C9EF6361"
+          }
+        ],
+        "/AwsPracticePythonStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/AwsPracticePythonStack/LambdaExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaExecutionRoleD5C26073"
+          }
+        ],
+        "/AwsPracticePythonStack/LambdaExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaExecutionRoleDefaultPolicy6D69732F"
+          }
+        ],
+        "/AwsPracticePythonStack/s3-object-notification/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3objectnotification29798672"
+          }
+        ],
+        "/AwsPracticePythonStack/s3-object-notification/sree7k7@gmail.com/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3objectnotificationsree7k7gmailcomBEF56F82"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-log-group/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonloggroup4A39C3B1"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonlambda04707445"
+          }
+        ],
+        "/AwsPracticePythonStack/aws-practice-python-lambda/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awspracticepythonlambdaEventInvokeConfig9DD758C6"
+          }
+        ],
+        "/AwsPracticePythonStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AwsPracticePythonStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/AwsPracticePythonStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AwsPracticePythonStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AwsPracticePythonStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

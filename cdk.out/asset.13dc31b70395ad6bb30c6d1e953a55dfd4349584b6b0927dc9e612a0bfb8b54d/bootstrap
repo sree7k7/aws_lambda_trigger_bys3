@@ -1,0 +1,2 @@
+#!/bin/sh
+aws s3 mb s3://test-619831221558x --region eu-central-1
